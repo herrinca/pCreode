@@ -341,7 +341,8 @@ def hierarchical_placement( graph, end_ind):
         
     hi_pl.vs["label"] = hi_pl.vs["name"]
     return( hi_pl, names)
-    
+
+
 #################################################
 def consensus_alignment( down, hi_pl_ind, data, density, noise):
     ''' 
