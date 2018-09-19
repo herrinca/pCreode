@@ -702,7 +702,7 @@ def pCreode( data, density, noise, target, file_path, num_runs=100, potential_cl
         aligned_ind = consensus_alignment( down, hi_pl_ind.copy(), data, density, noise)
         # add orginal endstates back into aligned list of indices 
         al_es_ind = np.append( cen_ind, np.unique( aligned_ind[~np.in1d( aligned_ind, cen_ind)]))
-        # perform hierarchical placement of of newly aligned data points
+        # perform hierarchical placement of newly aligned data points
         al_hi_pl, al_hi_pl_ind = hierarchical_placement( dens_knn, al_es_ind)
         # rerun hierarchical placement on the aligned placement graph to eliminate superfluous edges
         # by re-feeding it the orginal endstate indices
